@@ -17,6 +17,7 @@
   <h1><%= @name1 %> vs. <%= @name2 %></h1>
   <h3><%= @name1 %>: <%=@p1HP%>HP  - <%= @name2 %>: <%=@p2HP%>HP</h3>
 
-  <div class="button">
-    <h5> <a href="/attack">Attack</a></h5>
+  <div class="button" value='Attack Player 2'>
+    <!-- Why couldn't I get rspect find the button with a value of Attack Player 2 tho???? -->
+    <h5> <a href="/attack_confirmation" value='Attack Player 2'>Attack Player 2</a></h5>
   </div>

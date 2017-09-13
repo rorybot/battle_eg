@@ -23,6 +23,13 @@ class Battle < Sinatra::Base
     @p2HP = 100
     erb(:play)
   end
+
+  get '/attack_confirmation' do
+    @name1 = session[:name1]
+    @name2 = session[:name2]
+    erb(:attack_confirmation)
+  end
+
   #
   # get '/attack' do
   #   @name1 = session[:name1]
