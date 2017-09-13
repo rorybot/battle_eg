@@ -3,6 +3,6 @@ feature 'See Hit Points' do
     sign_in_and_play
     click_link(value='Attack Player 2')
     visit ('/attack_confirmation')
-    expect(page).to have_content 'WHAMMO! James has attacked Rory! :o'
+    expect(page).to have_content 'WHAMMO! James has attacked Rory! （・□・；）'
   end
 end

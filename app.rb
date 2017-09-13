@@ -13,14 +13,16 @@ class Battle < Sinatra::Base
     p params
     session[:name1] = params[:name1]
     session[:name2] = params[:name2]
+    session[:player1hitpoints] = params[:player1hitpoints]
+    session[:player2hitpoints] = params[:player2hitpoints]
     redirect '/play'
   end
 
   get '/play' do
     @name1 = session[:name1]
     @name2 = session[:name2]
-    @p1HP = 100
-    @p2HP = 100
+    @p1HP = session[:player1hitpoints]
+    @p2HP = session[:player2hitpoints]
     erb(:play)
   end
 
