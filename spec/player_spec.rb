@@ -1,15 +1,23 @@
-# RSpec.describe Player do
-#
-#
-# #   As two Players,
-# # So we can play a personalised game of Battle,
-# # We want to Start a fight by entering our Names and seeing them
-#
-# subject(:player) {Player.new}
-#
-#  it 'Creates a player and can recall a name' do
-#    expect(player.name).to eq 'Rory'
-#  end
-#
-#
-# end
+
+
+RSpec.describe Player do
+
+subject(:player) { described_class.new ('Gregory') }
+
+ # it 'player receives a name' do
+ #   battle = Battle.new
+ #   battle.assign_player1_name('Rory')
+ #  #  assign variable name1 in battle to name Rory
+ #  #  access variable from battle that is name1
+ #   expect(player.name).to eq 'Rory'
+ # end
+
+
+
+  feature 'Enter names' do
+    scenario 'assigns player name to Player class' do
+      expect(player.name).to eq 'Gregory'
+    end
+  end
+
+end

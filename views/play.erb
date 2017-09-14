@@ -1,6 +1,6 @@
 <head>
   <style>
-  .button {
+  .attack_button {
       background-color: #4CAF50; /* Green */
       border: none;
       color: white;
@@ -14,10 +14,15 @@
   </style>
 </head>
 
-  <h1><%= @name1 %> vs. <%= @name2 %></h1>
-  <h3><%= @name1 %>: <%=@p1HP%>HP  - <%= @name2 %>: <%=@p2HP%>HP</h3>
 
-  <div class="button" value='Attack Player 2'>
-    <!-- Why couldn't I get rspect find the button with a value of Attack Player 2 tho???? -->
+  <h1><%= @player1 %> vs. <%= @player2 %></h1>
+  <h3><%= @player1 %>: <%=@p1HP%>HP  - <%= @player2 %>: <%=@p2HP%>HP</h3>
+
+  <div class="attack_button" value='Attack Player 2'>
     <h5> <a href="/attack_confirmation" value='Attack Player 2'>Attack Player 2</a></h5>
   </div>
+
+
+  <form action="/attack_confirmation">
+    <input type="submit" value="Attack Player 2">
+  </form>
