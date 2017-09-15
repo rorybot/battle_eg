@@ -1,10 +1,16 @@
 class Player
 
- attr_reader :name
+ attr_reader :name, :starting_points
 
-  def initialize(name)
+  def initialize(name, points = 100)
     @name = name
+    @starting_points = points.to_i
   end
+
+  def attack
+    @starting_points - 50
+  end
+
 
 
   #
