@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/player'
+require './lib/game'
 
 class Battle < Sinatra::Base
 
@@ -44,7 +45,8 @@ class Battle < Sinatra::Base
     @player1 = $player1.name
     @player2 = $player2.name
     @attack_value = session[:attack_value]
-    @player2hitpoints = $player2.attack(@attack_value)
+    gamer = Game.new
+    @player2hitpoints = gamer.attack_player($player2, @attack_value)
     erb(:attack_confirmation)
   end
 
