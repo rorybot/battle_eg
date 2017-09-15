@@ -13,7 +13,6 @@ subject(:player) { described_class.new ('Gregory') }
  # end
 
 
-
   feature 'Enter names' do
     scenario 'assigns player name to Player class' do
       expect(player.name).to eq 'Gregory'

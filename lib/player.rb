@@ -7,8 +7,8 @@ class Player
     @starting_points = points.to_i
   end
 
-  def attack
-    @starting_points - 50
+  def attack(attack_value)
+   @starting_points -= attack_value.to_i
   end
 
 

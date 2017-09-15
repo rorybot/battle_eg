@@ -33,10 +33,18 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
+  post '/attack_value' do
+
+    session[:attack_value] = params[:attack_value]
+    redirect '/attack_confirmation'
+
+  end
+
   get '/attack_confirmation' do
     @player1 = $player1.name
     @player2 = $player2.name
-    @player2hitpoints = $player2.attack
+    @attack_value = session[:attack_value]
+    @player2hitpoints = $player2.attack(@attack_value)
     erb(:attack_confirmation)
   end
 
