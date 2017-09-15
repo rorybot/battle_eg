@@ -42,11 +42,13 @@ class Battle < Sinatra::Base
   end
 
   get '/attack_confirmation' do
-    @player1 = $player1.name
-    @player2 = $player2.name
+    @player1name = $player1.name
+    @player2name = $player2.name
+    @player1 = $player1
+    @player2 = $player2
     @attack_value = session[:attack_value]
     gamer = Game.new
-    @player2hitpoints = gamer.attack_player($player2, @attack_value)
+    @player2hitpoints = gamer.attack_player(@player2, @attack_value)
     erb(:attack_confirmation)
   end
 

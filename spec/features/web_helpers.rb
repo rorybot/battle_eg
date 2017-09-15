@@ -10,5 +10,6 @@ end
 def attack_player2_for_10_points
   sign_in_and_play
   fill_in :attack_value, with: 10
-  click_button('Attack Player 2')
+  fill_in :victim, with: 'Rory The Barbarian'
+  click_button('Attack Player')
 end

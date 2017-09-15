@@ -7,10 +7,10 @@ class Player
     @starting_points = points.to_i
   end
 
-  def attack(attack_value)
-   @starting_points -= attack_value.to_i
-  end
 
+  def receive_damage(attack_value)
+    @starting_points -= attack_value.to_i
+  end
 
 
   #
